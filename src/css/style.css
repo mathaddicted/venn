@@ -5,6 +5,8 @@
     margin:0px;
     padding:0px;
 
+    background-color: #262626;
+
     display:grid;
     grid-template-areas:"header header header header header"
                         "leftSidebar . mainContent . rightSidebar"
@@ -14,20 +16,25 @@
 
 .header{
     grid-area: header;
+    background-color:greenyellow;
 }
 
 .leftSidebar{
     grid-area: leftSidebar;
+    background-color: yellow;
 }
 
 .rightSidebar{
     grid-area: rightSidebar;
+    background-color: orangered;
 }
 
 .mainContent{
     grid-area: mainContent;
+    background-color: tomato;
 }
 
 .footer{
     grid-area: footer;
+    background-color:teal;
 }
