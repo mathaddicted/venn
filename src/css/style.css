@@ -15,7 +15,7 @@ html, body{
     grid-template-areas:"header header header header header"
                         "leftSidebar mainContent mainContent mainContent rightSidebar"
                         "footer footer footer footer footer";
-    grid-template-rows: 1fr 5fr 1fr;
+    grid-template-rows: 5fr 5fr 1fr;
 }
 
 .header{
