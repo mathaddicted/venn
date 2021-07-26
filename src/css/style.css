@@ -17,14 +17,31 @@ html, body{
                         "footer footer footer footer footer";
     grid-template-rows: 5fr 5fr 1fr;
 }
-
+/* */
 .header{
     grid-area: header;
+    
+    grid-template-areas: ". . . . ."
+                         ". headerImage . headerWelcome ."
+                         ". . . . .";
+    grid-template-rows: 1fr 2fr 1fr;
 
     background-color:greenyellow;
     text-align: center;
 }
 
+.headerImage{
+    grid-area: headerImage;
+
+    text-align: center;
+}
+
+.headerWelcome{
+    grid-area: headerWelcome;
+    text-align: center;
+}
+
+/* */
 .leftSidebar{
     grid-area: leftSidebar;
     
