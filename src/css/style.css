@@ -21,6 +21,7 @@ html, body{
 .header{
     grid-area: header;
     
+    display: grid;
     grid-template-areas: ". . . . ."
                          ". headerImage . headerWelcome ."
                          ". . . . .";
