@@ -34,7 +34,10 @@ html, body{
 .headerImage{
     grid-area: headerImage;
 
-    text-align: center;
+    display: flexbox;
+
+    justify-content: center;
+    align-items: center;
 }
 
 .headerWelcome{
