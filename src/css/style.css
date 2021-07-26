@@ -9,32 +9,42 @@
 
     display:grid;
     grid-template-areas:"header header header header header"
-                        "leftSidebar . mainContent . rightSidebar"
+                        "leftSidebar mainContent mainContent mainContent rightSidebar"
                         "footer footer footer footer footer";
     grid-template-rows: 1fr 5fr 1fr;
 }
 
 .header{
     grid-area: header;
+
     background-color:greenyellow;
+    text-align: center;
 }
 
 .leftSidebar{
     grid-area: leftSidebar;
+    
     background-color: yellow;
+    text-align: center;
 }
 
 .rightSidebar{
     grid-area: rightSidebar;
+ 
     background-color: orangered;
+    text-align: center;
 }
 
 .mainContent{
     grid-area: mainContent;
+ 
     background-color: tomato;
+    text-align: center;
 }
 
 .footer{
     grid-area: footer;
+ 
     background-color:teal;
+    text-align: center;
 }
