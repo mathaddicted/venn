@@ -23,26 +23,101 @@ html, body{
     
     display: grid;
     grid-template-areas: ". . . . ."
-                         ". headerImage . headerWelcome ."
+                         ". headerArea headerArea headerArea ."
                          ". . . . .";
-    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-rows: 0.5fr 2fr 0.5fr;
+    grid-template-columns: 1fr 5fr 5fr 5fr 1fr;
 
-    background-color:greenyellow;
+    background-color:#262626;
     text-align: center;
 }
 
-.headerImage{
-    grid-area: headerImage;
+.headerArea{
+    grid-area: headerArea;
 
-    display: flexbox;
+    display: flex;
 
     justify-content: center;
     align-items: center;
 }
 
+.headerImage{
+    grid-area: headerImage;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.headerImage img{
+    width: 400px;
+    min-width: 400px;
+    min-height: 400px;
+
+    animation: rotation 30s infinite linear;
+}
+
 .headerWelcome{
     grid-area: headerWelcome;
-    text-align: center;
+
+    display:flex;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.headerWelcome h1, .headerWelcome h2{
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+    font-family: 'Roboto', sans-serif;
+
+    margin:0px;
+    margin-left: 32px;
+}
+
+.headerWelcome h1{
+    font-size: 128px;
+    font-weight: 900;
+
+    color:gold;
+}
+
+.headerWelcome h2{
+    font-size:72px;
+    font-weight: 800;
+
+    color: palevioletred;
+}
+
+.blinkingCursor { 
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(1,0,0,1);
+    animation-duration: 1s;
+  
+    display: inline-block;
+    
+    color: #E0E0E0;
+}
+  
+@keyframes blinker { 
+from { opacity: 1.0; } to { opacity: 0.0; }
+}
+
+@keyframes rotation {
+from {
+    transform: rotate(0deg);} to { transform: rotate(359deg); }
+}
+
+@keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
 }
 
 /* */
